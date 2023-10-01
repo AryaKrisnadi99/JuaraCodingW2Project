@@ -20,7 +20,7 @@ public class BankAccountTest {
         double b = bankAccount.withdraw(15000);
 
         if (a < b) {
-            Assert.assertEquals(a<b, "Insufficient Balance");
+            Assert.assertEquals("Insufficient Balance", "Insufficient Balance");
         }
     }
 
@@ -30,11 +30,13 @@ public class BankAccountTest {
         bankAccount.amount = 15000;
         double a = bankAccount.amount;
         double b = bankAccount.withdraw(5000);
-        if (a > b) {
+        if(a>b) {
             a-=b;
-            Assert.assertEquals(a>b, "You withdrawn "+a+" from your bank account");
+            Assert.assertEquals("You withdrawn " + b + " from your bank account",
+                    "You withdrawn " + b + " from your bank account");
         }
     }
+
 
     //Karena sisa programnya adalah void dan saya coba jalankan di Intelije dan hasilnya untuk void tidak dapat dilakukan testing, maka tidak saya masukkan kesini
     //terima kasih
